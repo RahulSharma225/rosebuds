@@ -17,6 +17,8 @@ const generateOTP = () => {
 
 const sendOTPEmail = async (email, otp, name) => {
   try {
+    console.log(`\n📧 OTP for ${email}: ${otp} (Valid for 15 minutes)\n`);
+
     const mailOptions = {
       from: process.env.EMAIL_FROM,
       to: email,
